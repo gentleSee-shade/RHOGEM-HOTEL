@@ -591,8 +591,23 @@ export const HomePage: React.FC = () => {
                 rel="noopener noreferrer"
                 className="group block p-4 bg-[var(--ivory)] rounded border border-[var(--gold-soft)] hover:border-[var(--crimson)] transition-colors text-center mb-6"
               >
-                <div className="text-3xl font-heading font-bold text-[var(--crimson)]">
-                  {HOTEL_DATA.rating.score} / 5.0
+                <div className="flex flex-col items-center justify-center gap-1.5">
+                  <div className="text-3xl font-heading font-bold text-[var(--crimson)]">
+                    {HOTEL_DATA.rating.score} / 5.0
+                  </div>
+                  <div className="flex items-center justify-center gap-1" aria-label="4 out of 5 stars">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${
+                          i < 4
+                            ? 'fill-[var(--gold)] text-[var(--gold)]'
+                            : 'fill-[var(--gold)]/20 text-[var(--gold)]'
+                        }`}
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </div>
                 </div>
                 <div className="text-xs font-sans font-bold uppercase tracking-wider text-[var(--charcoal)] mt-1 flex items-center justify-center gap-1">
                   <span>{HOTEL_DATA.rating.score} on Google · {HOTEL_DATA.rating.reviewCount} reviews</span>
