@@ -1,0 +1,7 @@
+{
+  "name": "RHOGEM Hotel Takoradi",
+  "description": "RHOGEM Hotel in Takoradi, Ahanta West, Ghana. Comfortable rooms, swimming pool, restaurant, bar, and conference and event spaces.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
